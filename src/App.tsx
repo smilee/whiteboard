@@ -1,3 +1,13 @@
+import { Global } from '@emotion/react';
+
+import reset from './styles/reset';
+import Board from './components/Board';
+
 export default function App() {
-  return <h1>Hello world!</h1>;
+  return (
+    <>
+      <Global styles={reset} />
+      <Board />
+    </>
+  );
 }

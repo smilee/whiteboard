@@ -38,3 +38,6 @@ npm i -D jest @types/jest
 npm i -D @testing-library/react @testing-library/jest-dom
 ```
 
+## Install a state management library
+
+https://redux-toolkit.js.org/introduction/getting-started

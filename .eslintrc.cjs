@@ -3,7 +3,6 @@ module.exports = {
     browser: true,
     es2021: true,
     jest: true,
-
   },
   extends: [
     'airbnb',
@@ -21,14 +20,17 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'jest',
   ],
-  globals: {
-    context: 'readonly',
-  },
   settings: {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+    jest: {
+      globalAliases: {
+        describe: ['context'],
       },
     },
   },
@@ -73,6 +75,7 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     'no-unused-vars': 'off',
+    'no-param-reassign': ['error', { props: false }],
     '@typescript-eslint/no-unused-vars': ['error'],
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
     'react/require-default-props': ['error', {
